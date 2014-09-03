@@ -1,8 +1,10 @@
 //Alec Douglass
 //Welcome Class
 
+//the class
 public class WelcomeClass{
     
+    //main method
     public static void main(String[] args)  {
         
 //Out put with network ID and small statement
