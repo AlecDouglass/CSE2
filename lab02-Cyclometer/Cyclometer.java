@@ -18,7 +18,7 @@ public class Cyclometer {
         int countsTrip2=9037; //input rotation count trip two
         
         //intermediate variables & output data
-        double wheelDiameter=27.0, //input diameter of wheel
+        double wheelDiameter=27.0, //input diameter of wheel...double means it has decimals
         PI=3.14159, //is pi
         feetPerMile=5280, //the number of feet in a mile for conversions
         inchesPerFoot=12, //more convertions...feet to inches
