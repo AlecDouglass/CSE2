@@ -31,7 +31,7 @@ public class BigMac {
         dollars=(int)cost$;
         //get dime amount
         dimes=(int)(cost$*10)%10; //% mod gives the remainder after division
-        pennies=(int)(cost$*100)%100;//same process as for dimes in next decimal
+        pennies=(int)(cost$*100)%10;//same process as for dimes in next decimal
         //print out the price
         System.out.println("the total cost of " +nBigMacs+ " BigMacs at $" +bigMac$+ " per BigMac, with a" +
         " sales tax of " +taxRate+ "%, is $" +dollars+ "." + dimes + pennies);
