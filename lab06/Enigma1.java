@@ -13,23 +13,28 @@ public class Enigma1{
    //print out the proportion remaining for select percentages
     if (scan.hasNextDouble()){
         double x = scan.nextDouble();
-       if(x/100==0.93){  //when the user enters 7
-        System.out.println("The proportion remaining is "+0.93);
+        if (x<0 || x>99){
+          System.out.println("You entered an invalid input");
         }
-        else if(x/100==0.59){//when the user enters 41
-          System.out.println("The proportion remaining is "+0.59);
-        }
-        else if(x/100==0.86){//when the user enters 14
-          System.out.println("The proportion remaining is "+0.86);
-        }
-        else if(x/100==0.67){//when the user enters 33
-          System.out.println("The proportion remaining is "+0.67);
-        }
-        else if(x/100==0.4){//when the user enters 60
-          System.out.println("The proportion remaining is "+0.40);
-        }
-        else {
-           System.out.println("You entered "+x+"%");
+        else{
+          if(x==7){  //when the user enters 7
+            System.out.println("The proportion remaining is "+0.93);
+          }
+          else if(x==41){//when the user enters 41
+            System.out.println("The proportion remaining is "+0.59);
+          }
+          else if(x==14){//when the user enters 14
+            System.out.println("The proportion remaining is "+0.86);
+          }
+          else if(x==33){//when the user enters 33
+            System.out.println("The proportion remaining is "+0.67);
+          }
+          else if(x==60){//when the user enters 60
+            System.out.println("The proportion remaining is "+0.40);
+          }
+          else {
+             System.out.println("You entered "+x+"%");
+          }
         }
     }
     else{
@@ -44,8 +49,9 @@ public class Enigma1{
  *    and fix the errors)
  *    Hint: What kinds of input are unacceptable? What kinds of
  *        acceptable input don't produce the correct answer?
+ 
  * logic error selected values are not printed correctly
  * runtime error for non numbers
- * 
+ * logic error invalid numbers not dealt with
  * 
  */

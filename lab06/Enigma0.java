@@ -33,7 +33,6 @@ public class Enigma0{
 /* Error report: 
  *   Expand this comment:
  * compile time bug n not initialized
- * logic error with non ints...does not print input
  *
  *
  *
