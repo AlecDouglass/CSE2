@@ -13,7 +13,10 @@ public class LoopTheLoop{
         while (nTest<nStars){
             nTest++;
             System.out.print(star);
-            if ()   
+            if (nTest==10){
+                break;
+            }   
         }//end first while
+        
     }//end method
 }//end class
