@@ -25,21 +25,22 @@ public class MoreLoops{
         }while(tracker>0);
         
         n=scan.nextInt();
-        /*loop goes when j is less than n and less than 40
-        *nested if when k<j+1
+        /*  loop goes when j is less than n and less than 40
+        *   nested if when k<j+1
         *   when nested runs it prints a star
         *   then leaves and prints a blank line to move on
         */
-        
+        System.out.println(n);
         int j = 0;
         int k = 0;
         while (j<n && j<40){
-            j++;
             while (k<(j+1)){
                 k++;
                 System.out.print("*");
             }
             System.out.println();
+            j++;
+            k=0;
         }
         
         //below runs once before quitting
@@ -48,13 +49,27 @@ public class MoreLoops{
             System.out.println("k = "+k);
             k++;
         }
-        /////////////////////////////////////////////////////////
-        //this is the given code remember to rewrite it//////////
         int count = 0;
-        while(true){
-            switch(n){
-                
+        for(count=0;count<10;count++){
+            if (n==1||n==2){
+                for (n=0;n<12;)
+                System.out.print("Case 2");
+            }
+            else if (n==3){
+                break;
+            }
+            else if (n==4){
+                System.out.println("Case 4");
+                System.out.println("Case 5");
+            }
+            else if (n==5){
+                System.out.println("Case 5");
+            }
+            else{
+                System.out.println(n + " is > 5 or <1");
             }
         }
+        
+        
     }
 }
