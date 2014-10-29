@@ -8,22 +8,17 @@ import java.util.Scanner;
 public class Methods{
 	public static int getInt(Scanner scan){
 		scan=new Scanner(System.in);
-		System.out.print("Enter and int");
-		while (!scan.hasNextInt()){
-			System.out.print("Not an int, try again- ");
+		int count=0;
+		for (count=0;count<3;count++){
+			System.out.print("Enter and int: ");
+			while (!scan.hasNextInt()){
+				System.out.print("Not an int, try again- ");
+			}
+			int i = scan.nextInt();
+			return i;
 		}
-		int a = scan.nextInt();
-		System.out.print("Enter and int");
-		while (!scan.hasNextInt()){
-			System.out.print("Not an int, try again- ");
-		}
-		int b = scan.nextInt();
-		System.out.print("Enter and int");
-		while (!scan.hasNextInt()){
-			System.out.print("Not an int, try again- ");
-		}
-		int c = scan.nextInt();
-		
+		int i = scan.nextInt();
+		return i;
 	}
 	public static int larger(int a,int b){
 		Scanner scan=new Scanner(System.in);
@@ -36,7 +31,18 @@ public class Methods{
 			return b;
 		}
 	}
-	public static int larger(int a, int (larger(b,c)){//what the fuck even is this whole middle part of my code
+	public static boolean ascending(int a, int b, int c){
+		Scanner scan=new Scanner(System.in);
+		a=getInt(scan);
+		b=getInt(scan);
+		c=getInt(scan);
+		if (a<b&b<c){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 	public static void main(String [] arg){
 	Scanner scan=new Scanner(System.in);
 	int a,b,c;

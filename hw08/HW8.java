@@ -20,12 +20,12 @@ public class HW8{
     public static char getInput(Scanner scan, String enter, int x){//yYnY only 5 times
         scan = new Scanner(System.in);//declare and call
         String i = scan.nextLine();//acept input
-        x=0;//initialize tracker
+        int y=1;//initialize tracker
         while(!i.equals("Y") && !i.equals("y") && !i.equals("N") && !i.equals("n")){//when iput is bad
             System.out.print("You did not enter a character from the list 'yYnN'; try again- ");//reprompt
             i = scan.nextLine();//reaccept input
-            x++;//track trials
-            if (x==4){//when fail 5 times
+            y++;//track trials
+            if (y==x){//when fail 5 times
                 System.out.println("You failed after 5 attempts");//inform user of failed attempts
                 return ' ';//return empty
             }
@@ -35,13 +35,13 @@ public class HW8{
     }
     public static char getInput(Scanner scan, String enter, String choice){//for numbers
         scan = new Scanner(System.in);//declare and call
-        System.out.println("Choose a digit");//prompt
-        System.out.print("Enter one of: '0', '1', '2', '3', '4', '5', '6', '7', '8', '9': ");//prompt
+        System.out.println(enter);//prompt
+        System.out.print(choice);//prompt
         String i = scan.nextLine();//accept input
         while(!i.equals("0")&&!i.equals("1")&&!i.equals("2")&&!i.equals("3")&&!i.equals("4")&&!i.equals("5")&&!i.equals("6")&&!i.equals("7")&&!i.equals("8")&&!i.equals("9")){//for bad input
             System.out.println("You did not enter an acceptable character");//inform user of mistake
-            System.out.println("Choose a digit");//reprompt
-            System.out.print("Enter one of: '0', '1', '2', '3', '4', '5', '6', '7', '8', '9': ");//reprompt
+            System.out.println(enter);//reprompt
+            System.out.print(choice);//reprompt
             i = scan.nextLine();//reaccept input
         }
         char c=i.charAt(0);//convert good input to char
@@ -58,7 +58,7 @@ public class HW8{
         if(input!=' '){//if the user gives good input
        	    System.out.println("You entered '"+input+"'");//print result second methos
         }
-        input=getInput(scan,"Choose a digit.","0123456789");//call last methos
+        input=getInput(scan,"Choose a digit.","0123456789: ");//call last methos
         System.out.println("You entered '"+input+"'");//print result from last method
         
     }//end main method   
